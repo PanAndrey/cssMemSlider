@@ -32,16 +32,16 @@ function nextItem(n) {
   changeCurrentItem(n + 1);
   showItem("from-right");
 }
-document.querySelector(".control.left").addEventListener("click", function () {
-  if (isEnabled) {
-    previousItem(currentItem);
-  }
-});
-document.querySelector(".control.right").addEventListener("click", function () {
-  if (isEnabled) {
-    nextItem(currentItem);
-  }
-});
+// document.querySelector(".control.left").addEventListener("click", function () {
+//   if (isEnabled) {
+//     previousItem(currentItem);
+//   }
+// });
+// document.querySelector(".control.right").addEventListener("click", function () {
+//   if (isEnabled) {
+//     nextItem(currentItem);
+//   }
+// });
 
 const swipeDetect = (el) => {
   let surface = el;
