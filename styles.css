@@ -9,7 +9,7 @@ html {
 .container {
   margin: 0 auto;
   max-width: 1440px;
-  min-width: 1200px;
+  min-width: 500px;
 }
 .site-container {
   display: flex;
@@ -35,9 +35,19 @@ html {
 .overflow {
   width: 100%;
   overflow: hidden;
+  height: 530px;
 }
 article img {
   width: 100%;
+}
+.slider-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.slider-desc {
+  margin-top: 5%;
+  font-size: 30px;
 }
 #desktop:checked ~ #slider {
   max-width: 460px;
@@ -102,18 +112,18 @@ a {
   background: #bbb;
 }
 #active {
-  margin: 23% 0 0;
+  margin: -10.5% 0 0 80%;
   text-align: center;
 }
 #active label:hover {
-  background: #76c8ff;
+  background: #ffcf73;
   border-color: #777 !important;
 }
 #control1:checked ~ #active label:nth-child(1),
 #control2:checked ~ #active label:nth-child(2),
 #control3:checked ~ #active label:nth-child(3),
 #control4:checked ~ #active label:nth-child(4) {
-  background: #18a3dd;
+  background: #bf8f30;
   border-color: #18a3dd !important;
 }
 #slides .slider-imgs {
@@ -126,4 +136,18 @@ a {
 
 #controls label {
   transition: opacity 0.2s ease-out;
+}
+@media (max-width: 500px) {
+  .slider-desc {
+    margin-top: 15%;
+    font-size: 30px;
+  }
+  #active {
+    margin: -27% 0 0 -84%;
+  }
+  .overflow {
+    width: 100%;
+    overflow: hidden;
+    height: 600px;
+  }
 }
