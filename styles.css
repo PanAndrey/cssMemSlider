@@ -9,6 +9,7 @@ html {
 .container {
   margin: 0 auto;
   max-width: 1440px;
+  min-width: 1200px;
 }
 .site-container {
   display: flex;
@@ -42,6 +43,7 @@ html {
 .description {
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin: 30px 20%;
   font-size: 32px;
   justify-content: space-between;
@@ -84,7 +86,7 @@ html {
 
 .dots-wrapper {
   position: relative;
-  margin-top: -9.5%;
+  margin-top: -70px;
   left: 26%;
 }
 .dot {
@@ -102,4 +104,22 @@ html {
 .pressed {
   border: 3px solid #6890d4;
   background-color: transparent;
+}
+@media (max-width: 1200px) {
+  .mem-desc {
+    padding-top: 50px;
+  }
+  .dots-wrapper {
+    position: relative;
+    margin-top: -108px;
+    left: -18%;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    min-width: 600px;
+  }
+  .carousel {
+    width: 100%;
+  }
 }
