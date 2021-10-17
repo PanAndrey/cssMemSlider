@@ -11,7 +11,9 @@
     <main class="container site-container">
       <h1>Mem Slider</h1>
 
-      <div class="carousel">
+      <!-- <div class="carousel">
+
+
         <div class="item-container">
           <div class="item active">
             <div class="description">
@@ -44,8 +46,48 @@
           <button class="dot"></button>
           <button class="dot"></button>
         </div>
+      </div> -->
+      <div class="slider-wrapper">
+        <input checked type="radio" name="respond" id="desktop" />
+        <article id="slider">
+          <input checked type="radio" name="bullet" id="control1" />
+          <input type="radio" name="bullet" id="control2" />
+          <input type="radio" name="bullet" id="control3" />
+          <input type="radio" name="bullet" id="control4" />
+
+          <div class="slides">
+            <div class="overflow">
+              <div class="slider-imgs">
+                <article>
+                  <img src="img/mem1.jpg" alt="img not found" />
+                </article>
+                <article>
+                  <img src="img/mem2.jpg" alt="img not found" />
+                </article>
+                <article>
+                  <img src="img/mem3.jpg" alt="img not found" />
+                </article>
+                <article>
+                  <img src="img/mem4.jpg" alt="img not found" />
+                </article>
+              </div>
+            </div>
+          </div>
+          <div id="controls">
+            <label for="control1"></label>
+            <label for="control2"></label>
+            <label for="control3"></label>
+            <label for="control4"></label>
+          </div>
+
+          <div id="active">
+            <label for="control1"></label>
+            <label for="control2"></label>
+            <label for="control3"></label>
+            <label for="control4"></label>
+          </div>
+        </article>
       </div>
     </main>
-    <script src="index.js"></script>
   </body>
 </html>
