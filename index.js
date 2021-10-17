@@ -26,22 +26,14 @@ function previousItem(n) {
   hideItem("to-right");
   changeCurrentItem(n - 1);
   showItem("from-left");
+  dotColor(currentItem);
 }
 function nextItem(n) {
   hideItem("to-left");
   changeCurrentItem(n + 1);
   showItem("from-right");
+  dotColor(currentItem);
 }
-// document.querySelector(".control.left").addEventListener("click", function () {
-//   if (isEnabled) {
-//     previousItem(currentItem);
-//   }
-// });
-// document.querySelector(".control.right").addEventListener("click", function () {
-//   if (isEnabled) {
-//     nextItem(currentItem);
-//   }
-// });
 
 const swipeDetect = (el) => {
   let surface = el;
@@ -117,3 +109,32 @@ const swipeDetect = (el) => {
 };
 let el = document.querySelector(".carousel");
 swipeDetect(el);
+
+const dots = document.querySelectorAll(".dot");
+
+for (let i = 0; i < dots.length; i++) {
+  dots[i].addEventListener("click", function () {
+    if (currentItem != i && isEnabled) {
+      dotChange(i);
+    }
+  });
+}
+function dotChange(n) {
+  if (currentItem > n) {
+    hideItem("to-right");
+    changeCurrentItem(n);
+    showItem("from-left");
+  } else {
+    hideItem("to-left");
+    changeCurrentItem(n);
+    showItem("from-right");
+  }
+  dotColor(n);
+}
+
+function dotColor(dotNumber) {
+  dots.forEach((element) => {
+    element.classList.remove("pressed");
+  });
+  dots[dotNumber].classList.add("pressed");
+}

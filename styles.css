@@ -16,12 +16,8 @@ html {
   align-items: center;
 }
 .carousel {
-  position: absolute;
-  top: 60%;
-  left: 50%;
   width: 50%;
   text-align: center;
-  transform: translate(-50%, -50%);
 }
 .item-container {
   position: relative;
@@ -48,36 +44,11 @@ html {
   flex-direction: column;
   margin: 30px 20%;
   font-size: 32px;
-  border: 2px solid black;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .mem-desc {
   padding: 10px;
-}
-.control {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 15%;
-  cursor: pointer;
-}
-.control.left {
-  left: 0;
-  right: auto;
-}
-.control.right {
-  left: auto;
-  right: 0;
-}
-.arrow {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%);
-  font-size: 84px;
-}
-.arrow.right {
-  right: 50%;
 }
 
 .to-left {
@@ -109,4 +80,26 @@ html {
   to {
     left: 0%;
   }
+}
+
+.dots-wrapper {
+  position: relative;
+  margin-top: -9.5%;
+  left: 26%;
+}
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: #29477f;
+  border: 3px solid #29477f;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.dot:hover {
+  background-color: #4577d4;
+  border: 3px solid #4577d4;
+}
+.pressed {
+  border: 3px solid #6890d4;
+  background-color: transparent;
 }
